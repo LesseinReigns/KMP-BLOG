@@ -176,3 +176,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
+
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
