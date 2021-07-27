@@ -26,7 +26,7 @@ def subscribe(email):
     }
     r = requests.post(
         members_endpoint,
-        auth=("", MAILCHIMP_API_KEY),
+        auth=("e3bfd41e5302e26b29037d39451d645e-us7", MAILCHIMP_API_KEY),
         data=json.dumps(data)
     )
     return r.status_code, r.json()
